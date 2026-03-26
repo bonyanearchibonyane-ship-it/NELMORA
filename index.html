@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NELMORA | Luxury Bag Boutique</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    html { scroll-behavior: smooth; }
+    a { text-decoration: none; }
+    img { width: 100%; display: block; }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(0,0,0,0.95);
+      border-bottom: 1px solid #d4af37;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 15px;
+    }
+    .logo {
+      color: #d4af37; font-size: 28px; font-weight: bold; letter-spacing: 4px;
+    }
+    .nav-links a {
+      color: #f5e7a1; margin-left: 18px; font-size: 14px;
+    }
+    .nav-links a:hover { color: #d4af37; }
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(to bottom, #000, #111, #000);
+    }
+    .hero small {
+      color: #d4af37; letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 15px;
+    }
+    .hero h1 {
+      font-size: 52px; margin-bottom: 20px;
+    }
+    .hero h1 span { color: #d4af37; }
+    .hero p {
+      max-width: 760px; margin: 0 auto 30px; color: #f5e7a1; font-size: 18px;
+    }
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 14px; font-weight: bold; margin: 8px;
+    }
+    .btn-gold { background: #d4af37; color: #000; }
+    .btn-outline { border: 1px solid #d4af37; color: #d4af37; }
+    .btn-outline:hover, .btn-gold:hover { opacity: 0.9; }
+    section { padding: 70px 0; }
+    .section-title {
+      text-align: center; margin-bottom: 40px;
+    }
+    .section-title small {
+      color: #d4af37; text-transform: uppercase; letter-spacing: 4px; display: block; margin-bottom: 10px;
+    }
+    .section-title h2 { font-size: 36px; }
+    .features, .products, .testimonials, .policies {
+      display: grid; gap: 25px;
+    }
+    .features { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .products { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .testimonials { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .policies { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .card {
+      background: #111;
+      border: 1px solid #6f5a18;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(212,175,55,0.08);
+    }
+    .card-content { padding: 20px; }
+    .card h3, .card h4 { margin-bottom: 10px; }
+    .gold { color: #d4af37; }
+    .card p { color: #f5e7a1; }
+    .product-img { height: 320px; object-fit: cover; }
+    .order-btn {
+      width: 100%; padding: 12px; border: none; border-radius: 14px;
+      background: #d4af37; color: #000; font-weight: bold; cursor: pointer; margin-top: 12px;
+    }
+    .about, .faq, .contact-box {
+      background: #111; border-top: 1px solid #6f5a18; border-bottom: 1px solid #6f5a18;
+    }
+    .about .inner, .faq .inner, .contact-box .inner { padding: 20px 0; }
+    .about-text, .contact-text { max-width: 800px; margin: auto; text-align: center; }
+    .about-text p, .contact-text p { color: #f5e7a1; font-size: 18px; }
+    .faq-list { max-width: 900px; margin: auto; }
+    .faq-item {
+      background: #000; border: 1px solid #6f5a18; border-radius: 18px; padding: 20px; margin-bottom: 16px;
+    }
+    .faq-item p { color: #f5e7a1; }
+    form {
+      max-width: 700px; margin: 30px auto 0; display: grid; gap: 15px;
+    }
+    input, textarea {
+      width: 100%; padding: 16px; border-radius: 14px; border: 1px solid #6f5a18;
+      background: #000; color: #fff;
+    }
+    footer {
+      border-top: 1px solid #6f5a18; text-align: center; padding: 35px 20px;
+    }
+    footer p { color: #f5e7a1; margin-top: 8px; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 34px; }
+      .nav-links { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; }
+      .nav-links a { margin-left: 0; }
+      .section-title h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">NELMORA</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#products">Collection</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <small>Luxury Bag Boutique</small>
+      <h1>Discover the <span>Art of Luxury</span></h1>
+      <p>NELMORA brings elegant handbags and timeless fashion pieces designed for women who want confidence, beauty, and premium style every day.</p>
+      <a href="#products" class="btn btn-gold">Explore Collection</a>
+      <a href="#contact" class="btn btn-outline">Launching Soon</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container features">
+      <div class="card"><div class="card-content"><h3 class="gold">Delivery in Morocco</h3><p>Fast and secure delivery planned across Morocco.</p></div></div>
+      <div class="card"><div class="card-content"><h3 class="gold">Cash on Delivery</h3><p>Easy payment option for your future customers.</p></div></div>
+      <div class="card"><div class="card-content"><h3 class="gold">Premium Quality</h3><p>Elegant materials and luxury-inspired designs.</p></div></div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-title">
+        <small>Featured Collection</small>
+        <h2>Signature Bags</h2>
+      </div>
+      <div class="products">
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="Elegant Handbag"><div class="card-content"><h3>Elegant Handbag</h3><h4 class="gold">490 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=80" alt="Luxury Tote Bag"><div class="card-content"><h3>Luxury Tote Bag</h3><h4 class="gold">790 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Premium Crossbody Bag"><div class="card-content"><h3>Premium Crossbody Bag</h3><h4 class="gold">690 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80" alt="Golden Chain Bag"><div class="card-content"><h3>Golden Chain Bag</h3><h4 class="gold">850 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1606522754091-a3bbf9ad4cb3?auto=format&fit=crop&w=800&q=80" alt="Classic Shoulder Bag"><div class="card-content"><h3>Classic Shoulder Bag</h3><h4 class="gold">620 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+        <div class="card"><img class="product-img" src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80" alt="Luxury Mini Bag"><div class="card-content"><h3>Luxury Mini Bag</h3><h4 class="gold">540 MAD</h4><button class="order-btn">Order Coming Soon</button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container inner">
+      <div class="section-title">
+        <small>About NELMORA</small>
+        <h2>Luxury. Elegance. Confidence.</h2>
+      </div>
+      <div class="about-text">
+        <p>NELMORA is a premium bag boutique created for women who love elegant fashion. Our collection is inspired by timeless beauty, modern femininity, and luxury details — designed to elevate every outfit with sophistication.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <small>Testimonials</small>
+        <h2>What People Love</h2>
+      </div>
+      <div class="testimonials">
+        <div class="card"><div class="card-content"><p>“Elegant designs and a luxury feel — exactly what I love.”</p></div></div>
+        <div class="card"><div class="card-content"><p>“Beautiful bags with classy style for every occasion.”</p></div></div>
+        <div class="card"><div class="card-content"><p>“NELMORA looks like a premium brand already.”</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container inner">
+      <div class="section-title">
+        <small>FAQ</small>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><h3 class="gold">Do you deliver in Morocco?</h3><p>Yes, NELMORA plans to offer delivery across Morocco.</p></div>
+        <div class="faq-item"><h3 class="gold">Is cash on delivery available?</h3><p>Yes, cash on delivery will be available for customers in Morocco.</p></div>
+        <div class="faq-item"><h3 class="gold">Can I order through WhatsApp later?</h3><p>Yes, your WhatsApp ordering option can be added anytime after launch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container policies">
+      <div class="card"><div class="card-content"><h3 class="gold">Delivery Policy</h3><p>NELMORA plans to offer reliable shipping across Morocco with safe packaging and careful delivery for every order.</p></div></div>
+      <div class="card"><div class="card-content"><h3 class="gold">Return Policy</h3><p>A simple and customer-friendly return policy can be activated when your store officially launches.</p></div></div>
+    </div>
+  </section>
+
+  <section class="contact-box" id="contact">
+    <div class="container inner">
+      <div class="section-title">
+        <small>Contact</small>
+        <h2>NELMORA is Ready to Launch</h2>
+      </div>
+      <div class="contact-text">
+        <p>WhatsApp, Instagram, and social pages can be added later anytime. Your luxury store design is ready now.</p>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="button" class="btn btn-gold" style="border:none; cursor:pointer; width:100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">NELMORA</div>
+    <p>Luxury Bag Boutique • Morocco</p>
+    <p>© 2026 NELMORA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
