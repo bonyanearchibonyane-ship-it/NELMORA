@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NELMORALINE BAGS SHOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ترويسة الموقع -->
+    <header>
+        <h1>NELMORALINE BAGS SHOP 🌸</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">منتجاتنا</a></li>
+                <li><a href="#offers">العروض</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- الصفحة الرئيسية -->
+    <section id="home">
+        <h2>اكتشفي أجمل الحقائب لكل امرأة مغربية</h2>
+        <p>حقائب فاخرة، أنيقة، وعملية مصممة خصيصاً لكِ.</p>
+        <a href="#products" class="btn">تسوقي الآن</a>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <section id="products">
+        <h2>منتجاتنا</h2>
+        <div id="product-grid" class="product-grid">
+            <!-- المنتجات ستظهر هنا تلقائياً بواسطة JavaScript -->
+        </div>
+    </section>
+
+    <!-- قسم العروض -->
+    <section id="offers">
+        <h2>العروض الخاصة</h2>
+        <div class="product-grid" id="offers-grid">
+            <!-- عروض خاصة ستظهر هنا -->
+        </div>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>NELMORALINE BAGS SHOP هو متجر مغربي متخصص في بيع الحقائب النسائية الفاخرة. نهدف إلى تقديم الجودة والأناقة لكل امرأة مغربية مع خدمة عملاء ممتازة.</p>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <form id="contact-form">
+            <label>الاسم:</label>
+            <input type="text" placeholder="اكتب اسمك" required>
+            <label>البريد الإلكتروني:</label>
+            <input type="email" placeholder="اكتب بريدك" required>
+            <label>الرسالة:</label>
+            <textarea placeholder="اكتب رسالتك هنا" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>حقوق النشر &copy; 2026 NELMORALINE BAGS SHOP جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="products.js"></script>
+    <script>
+        // نموذج الاتصال
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("شكراً لتواصلك معنا! سنرد عليك قريباً.");
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
